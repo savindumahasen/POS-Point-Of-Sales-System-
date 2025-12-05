@@ -26,10 +26,10 @@ public class ProductController {
     public String createProduct(@RequestBody ProductRequest productRequest){
         Product result=productService.createProduct(productRequest);
         if(result!=null){
-            return "Product is successfully added";
+            return result.getName()+" Product is successfully added";
 
         }else{
-            return "Product is not successfully added";
+            return result.getName()+" Product is not successfully added";
         }
 
     }
