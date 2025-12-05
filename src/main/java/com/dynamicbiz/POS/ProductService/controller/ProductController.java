@@ -37,8 +37,7 @@ public class ProductController {
     @ResponseStatus(HttpStatus.OK)
     // Get All Products
     public List<ProductResponse> getAllProducts(){
-
-
-        return productService.getAllProducts();
+        List<ProductResponse> result=productService.getAllProducts();
+        return result;
     }
 }

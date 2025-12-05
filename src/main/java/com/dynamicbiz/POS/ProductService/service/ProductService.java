@@ -34,8 +34,8 @@ public class ProductService {
 
     public List<ProductResponse> getAllProducts(){
         List<Product> products=productRepository.findAll();
-        return products.stream().map(this::mapToProductResponse).toList();
-        //return productRepository.getReferenceById(id);
+        List<ProductResponse> result=products.stream().map(this::mapToProductResponse).toList();
+        return result;
     }
 
     private ProductResponse mapToProductResponse(Product product) {
